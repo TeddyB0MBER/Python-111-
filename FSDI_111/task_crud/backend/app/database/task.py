@@ -15,7 +15,7 @@ def output_formatter(results):
 def scan():
     conn = get_db()
     cursor = conn.execute(
-        "SELECT * FROM task WHERE is_active= 1", ()
+        "SELECT * FROM task WHERE is_active=1", ()
     )
     results = cursor.fetchall()
     cursor.close()
