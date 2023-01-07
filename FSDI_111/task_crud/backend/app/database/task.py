@@ -28,7 +28,7 @@ def select_by_id(pk):
     )
     results = cursor.fetchall()
     cursor.close()
-    return output_formatter(results)
+    return output_formatter(results)[0]
 
 def insert(raw_data):
     task_data = (
